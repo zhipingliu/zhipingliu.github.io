@@ -41,10 +41,8 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-71348210-1', 'auto');
-  ga('set', 'CustomVar', 1,'aaa','abab',2);
-  ga('set', 'userId', '111');
   ga('send', 'pageview');
-  ga('set', 'CustomVar', 1,'aaa','abab',2);
+
   
  
     var GAControl = function (pObj) {
@@ -80,7 +78,20 @@
             _hmt.push(['_trackEvent',el.data('category') || 'category',el.data('tag') || 'tag']);
         });
     });
+    
+setTimeout(function(){
+    var flag = parseInt(10*Math.random())%2 == 0 ? 5:10;
+ga.q = (ga.q || []);
+        ga.q.push(['_setCustomVar', 1,'difftime',flag+'s',2]);
+    
+},10000);
+
+
+
 </script>
+
+
+
 
 
 <script type="text/javascript">
@@ -100,6 +111,9 @@
    
 
 </script>
+
+
+
 
 
 </html>
