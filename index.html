@@ -13,7 +13,7 @@
     </div>
     <div class="navul" style="float:right">
         <ul>
-            <li class="navli"><a class="navlia" href="/index.html" _gaq.push([_trackEvent(home1, home2, home3,home4)]) data-tag="home" data-category="home" data-done="home" data-event="event" data-role="ga">Home</a></li>
+            <li class="navli"><a class="navlia" href="/index.html" data-tag="home" data-category="home" data-done="home" data-event="event" data-role="ga">Home</a></li>
             <li class="navli"><a class="navlia" href="/About.html">About</a></li>
             <li class="navli"><a class="navlia" href="/Hopicment/home.html">Hopicment</a></li>
         </ul>
@@ -66,7 +66,7 @@
             for (var key in this.dataTag) {
                 this[key] = this.target.data(this.dataTag[key]);
             };
-            window.ga('send', this.Event, this.Category, this.Done, this.Tag);
+            _gaq.push([_trackEvent(this.Event, this.Category, this.Done, this.Tag)]);
         }
     }
 
