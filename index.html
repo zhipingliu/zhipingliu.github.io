@@ -97,6 +97,41 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
  
+      var GAControl = function (pObj) {
+        this.dataTag = {
+            Event: "event",
+            Category: "category",
+            Done: "done",
+            Tag: "tag"
+        };
+        this.target = $(pObj);
+        this.init();
+    }
+    GAControl.prototype = {
+        init: function () {
+            this.setOptions();
+        },
+        setOptions: function () {
+            for (var key in this.dataTag) {
+                this[key] = this.target.data(this.dataTag[key]);
+            };
+            window.ga('send', this.Event, this.Category, this.Done, this.Tag);
+        }
+    }
+
+    $(document).ready(function () {
+        if (window.ga !== undefined && window.ga !== null) {
+          $(document).on("click","[data-role='ga']",function(){
+            new GAControl(this);
+          })
+        }
+
+        var _hmt = window._hmt || [];
+        $(document).on("click", "[data-role='ga']", function() {
+            var el = $(this);
+            _hmt.push(['_trackEvent',el.data('category') || 'category',el.data('tag') || 'tag']);
+        });
+    });
    
 
 </script>
