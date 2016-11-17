@@ -41,7 +41,7 @@
     <div class="bg-mod box">
             <!-- s: 按钮 -->
         <article class="btn-special-wrapper">
-            <a href="https://m.ximalaya.com/coupons/all_valid_list" class="btn1 btn-a" data-action="myCoupon" data-tag="mycoupon" data-category="123yure" data-done="mycoupon" data-role="ga" data-event="event">我的优惠券</a>
+            <a href="https://m.ximalaya.com/coupons/all_valid_list" onclick="return false" class="btn1 btn-a" data-action="myCoupon" data-tag="mycoupon" data-category="123yure" data-done="mycoupon" data-role="ga" data-event="event">我的优惠券</a>
             <a href="https://m.ximalaya.com/carnival/2016-123/guide" class="btn1 btn-a" data-tag="gonglue" data-category="123yure" data-done="gonglue" data-role="ga" data-event="event">活动攻略</a>
         </article>
             <!-- e: 按钮 -->
@@ -2258,7 +2258,7 @@
 
     <script src="https://s1.xmcdn.com/lib/common/last/jquery.cookie/1.4.1/jquery.cookie.js?v=20161115131915"></script>
 
-<!--     <script src="https://s1.xmcdn.com/lib/activity-123/last/main.js?v=20161115131915"></script> -->
+    <script src="https://s1.xmcdn.com/lib/activity-123/last/main.js?v=20161115131915"></script>
 
 
         <!-- ga -->
@@ -2300,6 +2300,7 @@
             if (window.ga !== undefined && window.ga !== null) {
                 $(document).on("click","[data-role='ga']",function(){
                     new GAControl(this);
+                    alert(123);
                 })
             }
         });
