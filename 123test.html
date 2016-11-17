@@ -60,7 +60,7 @@
             
                 <li class="card-main xrank-card" data-album-id="4345263">
                         <!-- s: 优惠券 -->
-                    <a class="coupon require-login" data-action="getCoupon" data-tag="daka-card2coupon" data-category="123yure" data-done="daka22222" data-role="ga" data-event="event">
+                    <a class="coupon require-login"  data-tag="daka-card2coupon" data-category="123yure" data-done="daka22222" data-role="ga" data-event="event">
             100元
                         <small>优惠券</small>
                         <small class="coupon-get">
@@ -86,7 +86,7 @@
             
                 <li class="card-main xrank-card" data-album-id="5318395">
                         <!-- s: 优惠券 -->
-                    <a class="coupon require-login" data-action="getCoupon" data-tag="daka-card3coupon" data-category="123yure" data-done="daka" data-role="ga" data-event="event">
+                    <a class="coupon require-login" onclick="return false" data-tag="daka-card3coupon" data-category="123yure" data-done="daka" data-role="ga" data-event="event">
             100元
                         <small>优惠券</small>
                         <small class="coupon-get">
@@ -333,7 +333,8 @@
     <script src="https://s1.xmcdn.com/lib/common/last/jquery/2.1.4/jquery.js?v=20161115131915"></script>
 
     <script src="https://s1.xmcdn.com/lib/common/last/jquery.cookie/1.4.1/jquery.cookie.js?v=20161115131915"></script>
-
+        
+    <script src="https://s1.xmcdn.com/lib/activity-123/last/main.js?v=20161115131915"></script>
 
 
         <!-- ga -->
@@ -375,6 +376,7 @@
             if (window.ga !== undefined && window.ga !== null) {
                 $(document).on("click","[data-role='ga']",function(){
                     new GAControl(this);
+                    alert(123);
                 })
             }
         });
