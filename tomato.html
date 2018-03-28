@@ -1,0 +1,152 @@
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript">
+        !function () { var a = "@charset \"utf-8\";html{color:#000;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}", b = document.createElement("style"); if (document.getElementsByTagName("head")[0].appendChild(b), b.styleSheet) b.styleSheet.disabled || (b.styleSheet.cssText = a); else try { b.innerHTML = a } catch (c) { b.innerText = a } }(); !function (a, b) { function c() { var b = f.getBoundingClientRect().width; b / i > 540 && (b = 540 * i); var c = b / 10; f.style.fontSize = c + "px", k.rem = a.rem = c } var d, e = a.document, f = e.documentElement, g = e.querySelector('meta[name="viewport"]'), h = e.querySelector('meta[name="flexible"]'), i = 0, j = 0, k = b.flexible || (b.flexible = {}); if (g) { console.warn("将根据已有的meta标签来设置缩放比例"); var l = g.getAttribute("content").match(/initial\-scale=([\d\.]+)/); l && (j = parseFloat(l[1]), i = parseInt(1 / j)) } else if (h) { var m = h.getAttribute("content"); if (m) { var n = m.match(/initial\-dpr=([\d\.]+)/), o = m.match(/maximum\-dpr=([\d\.]+)/); n && (i = parseFloat(n[1]), j = parseFloat((1 / i).toFixed(2))), o && (i = parseFloat(o[1]), j = parseFloat((1 / i).toFixed(2))) } } if (!i && !j) { var p = (a.navigator.appVersion.match(/android/gi), a.navigator.appVersion.match(/iphone/gi)), q = a.devicePixelRatio; i = p ? q >= 3 && (!i || i >= 3) ? 3 : q >= 2 && (!i || i >= 2) ? 2 : 1 : 1, j = 1 / i } if (f.setAttribute("data-dpr", i), !g) if (g = e.createElement("meta"), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + j + ", maximum-scale=" + j + ", minimum-scale=" + j + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g); else { var r = e.createElement("div"); r.appendChild(g), e.write(r.innerHTML) } a.addEventListener("resize", function () { clearTimeout(d), d = setTimeout(c, 300) }, !1), a.addEventListener("pageshow", function (a) { a.persisted && (clearTimeout(d), d = setTimeout(c, 300)) }, !1), "complete" === e.readyState ? e.body.style.fontSize = 12 * i + "px" : e.addEventListener("DOMContentLoaded", function () { e.body.style.fontSize = 12 * i + "px" }, !1), c(), k.dpr = a.dpr = i, k.refreshRem = c, k.rem2px = function (a) { var b = parseFloat(a) * this.rem; return "string" == typeof a && a.match(/rem$/) && (b += "px"), b }, k.px2rem = function (a) { var b = parseFloat(a) / this.rem; return "string" == typeof a && a.match(/px$/) && (b += "rem"), b } }(window, window.lib || (window.lib = {}));
+    </script>
+    <title>果小美</title>
+    <base href="/" />
+<link href="http://static.fanqiebianli.com/css/app.af425b.css?13f6d9a5b8fc08ad6e21" rel="stylesheet"></head>
+
+<body>
+    <div id="app"></div>
+    <!--<script type="text/javascript" src="./lib/vendor.dll.js"></script>-->
+    <!-- <script type="text/javascript" src="http://statict.fanqiebianli.com/lib/vendor.dll.js?123"></script>   -->
+    <script type="text/javascript" src="http://static.fanqiebianli.com/lib/vendor.dll.js?123"></script>
+     <!--<script type="text/javascript" src="http://static-test.fanqiebianli.com/lib/vendor.dll.js"></script> -->
+    <script type="text/javascript" src="http://static.fanqiebianli.com/js/app-af425b.js?13f6d9a5b8fc08ad6e21"></script>
+
+
+    <!-- Matomo -->
+    <script type="text/javascript">
+        window.getUrlParams = function (name, url) {
+            if (!url)
+                url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        };
+
+        var _paq = _paq || [];
+
+        (function () {
+            var userId = getUrlParams('userId'),
+                sessionKey = getUrlParams('sessionKey');
+
+            if (userId) {
+                _paq.push(['setUserId', userId]);
+            } else {
+                // 没有userID 使用sessionKey
+                sessionKey && _paq.push(['setUserId', sessionKey]);
+            }
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            var u = "//log.fanqiebianli.com/";
+            // var u = "//testpiwik.fanqiebianli.com/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', '1']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
+
+    <script type="text/javascript">
+        var userId = getUrlParams('userId'),
+            sessionKey = getUrlParams('sessionKey'),
+            shopId = getUrlParams('shopId');
+
+        // 保存url参数
+        if (!sessionStorage.getItem('sessionKey') && sessionKey) {
+            sessionStorage.setItem('sessionKey', sessionKey);
+        }
+        if (!sessionStorage.getItem('shopId') && shopId) {
+            sessionStorage.setItem('shopId', shopId);
+        }
+        if (!sessionStorage.getItem('userId') && userId) {
+            sessionStorage.setItem('userId', userId);
+        }
+
+        var shopId = shopId || sessionStorage.getItem('shopId'),
+            sessionKey = sessionKey || sessionStorage.getItem('sessionKey');
+
+        _paq.push([
+            'setCustomVariable',
+            1,
+            'sessionKey',
+            sessionKey,
+            'page'
+        ]);
+        _paq.push([
+            'setCustomVariable',
+            2,
+            'shopId',
+            shopId,
+            'page'
+        ]);
+
+        // 代码全局错误监控
+        window.onerror = function (errorMessage, scriptURI, lineNumber, columnNumber, errorObj) {
+            try {
+                if(errorMessage == 'WeixinJSBridge is not defined') {
+                    return true;
+                }
+                _paq.push(['setSiteId', '100']);
+                _paq.push(['setCustomVariable', 3, 'errorMessage', errorMessage, 'page']);
+                _paq.push(['trackEvent', 'error', 'window', 'onerror']);
+                _paq.push(['deleteCustomVariable', 3, "page"]);
+                _paq.push(['setSiteId', '1']);
+            } catch (error) { }
+        };
+
+        // 全局性能监控
+        window.onload = function () {
+            try {
+                if (window.performance || window.webkitPerformance) {
+                    var perf = window.performance || window.webkitPerformance;
+                    var timing = perf.timing;
+                    var navi = perf.navigation;
+
+                    var timer = setInterval(function () {
+                        if (0 !== timing.loadEventEnd) {
+                            clearInterval(timer);
+                            var times = {};
+                            // DNS查询耗时
+                            times.dns_query_time = timing.domainLookupEnd - timing.domainLookupStart;
+                            // TCP链接耗时
+                            times.tcp_connect_time = timing.connectEnd - timing.connectStart;
+                            // request请求耗时
+                            times.response_time = timing.responseEnd - timing.responseStart;
+                            // 解析dom树耗时
+                            times.dom_parse_time = timing.domComplete - timing.domInteractive;
+                            // 白屏时间
+                            times.white_screen_time = timing.responseStart - timing.navigationStart;
+                            // domready时间
+                            times.dom_ready_time = timing.domContentLoadedEventEnd - timing.navigationStart;
+                            // onload时间
+                            times.page_load_time = timing.loadEventEnd - timing.navigationStart;
+
+                            _paq.push(['setSiteId', '101']);
+                            _paq.push(['setCustomVariable', 5, 'timing', JSON.stringify(times), 'page']);
+                            _paq.push(['trackEvent', 'performance', 'timing', 'timing']);
+                            _paq.push(['deleteCustomVariable', 5, "page"]);
+                            _paq.push(['setSiteId', '1']);
+
+                        }
+                    })
+                }
+            } catch (error) { }
+        };
+    </script>
+    <script src="https://js.fundebug.cn/fundebug.0.3.4.min.js" defer="defer" apikey="e361cd2ce2e7c788fe704585dc0ab9284cd22a26b46fe06ce6aa008c774c969c"></script>
+</body>
+
+</html>
